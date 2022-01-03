@@ -16,6 +16,7 @@ public class QuickSalesTest extends TestBase {
 	UserLoginPage UserLoginObj;
 	String username="youssef";
 	String password="1234";
+	
 	@Test(priority = 1)
 	public void UserCanOpenSalesTransaction() throws InterruptedException
 	{	UserLoginObj=new UserLoginPage(driver);

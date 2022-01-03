@@ -49,7 +49,7 @@ public class CreateSalesOrderPage extends PageBase {
 	public WebElement TableItemName;
 	@FindBy(css = "a.nav-link.active.show")
 	WebElement DetailsTabBtn;
-	@FindBy(xpath =  "/html/body/div[1]/main/div/div[6]/ul/li[2]/a")
+	@FindBy(xpath =  "//a[@href='#Payments']")
 	WebElement PaymentsTabBtn;
 
 	@FindBy(xpath = "//*[@id=\"Payments\"]/div/table/tbody/tr/td[9]/a")
@@ -70,6 +70,32 @@ public class CreateSalesOrderPage extends PageBase {
 	public WebElement AssertPayment;
 	@FindBy(css = "a.form-group.btn.btn-info")
 	WebElement BackBtn; 
+	@FindBy(css = "a.btn.btn-primary")
+	WebElement ConfirmTransactionBtn;
+	@FindBy(css = "i.text-success.far.fa-check-circle.fa-lg")
+	WebElement ConfirmTransactionBtn2;
+	@FindBy(id = "submitButton")
+	WebElement ConfirmTransactionBtn3;
+	@FindBy(xpath = "/html/body/div[1]/main/div/div[4]/strong")
+	public WebElement AssertSalesTransaction;
+	@FindBy(xpath = "//a[@href='#CreditNote']")
+	WebElement CreditNoteTab;
+	@FindBy(name = "DomainModel.Note")
+	WebElement NoteTxtBox;
+	@FindBy(name = "DomainModel.Value")
+	WebElement ValueTxtBox;
+	@FindBy(xpath = "//a[@href='#DebitNote']")
+	WebElement DebitNoteTab;
+	@FindBy(name = "DomainModel.DebitTypeID")
+	WebElement DebitNoteType;
+	@FindBy(name = "DomainModel.CreditNoteTypeID")
+	WebElement CreditNoteType;
+	@FindBy(xpath = "/html/body/div/main/div/div")
+	public WebElement AssertConfirmCredit_DebitNote;
+	@FindBy(css ="a.form-group.btn.btn-info")
+	WebElement BackFromDebitNotePageBtn;
+	@FindBy(xpath ="//*[@id=\"DebitNote\"]/div/h2/a/i")
+	WebElement PlusSymbol2;
 	public void FillSalesOrder() throws InterruptedException
 	{
 
@@ -146,5 +172,40 @@ public class CreateSalesOrderPage extends PageBase {
 	 public void BackFromSalesPayments()
 	 {
 		 ClickButton(BackBtn);
+	 }
+	 public void ConfirmSalesTransaction()
+	 {
+		 ClickButton(ConfirmTransactionBtn);
+		 ClickButton(ConfirmTransactionBtn2);
+		 ClickButton(ConfirmTransactionBtn3);
+		 
+	 }
+	 public void OpenCreditNoteTab(String Note,String Value)
+	 {
+		 ClickButton(CreditNoteTab);
+		 ClickButton(PlusSymbol2);
+		 SetTextElement(NoteTxtBox, Note);
+		 ValueTxtBox.clear();
+		 SetTextElement(ValueTxtBox, Value);
+		 select=new Select(CreditNoteType);
+		 select.selectByValue("1");
+		 ClickButton(SaveBtn);
+	 }
+	 public void OpenDebitNoteTab(String DNote,String DValue) throws InterruptedException
+	 {
+		 ClickButton(DebitNoteTab);
+		 Thread.sleep(250);
+		 ClickButton(PlusSymbol2);
+		 SetTextElement(NoteTxtBox, DNote);
+		 ValueTxtBox.clear();
+		 SetTextElement(ValueTxtBox, DValue);
+		 select=new Select(DebitNoteType);
+		 select.selectByValue("1");
+		 ClickButton(SaveBtn);
+		 
+	 }
+	 public void BackFromDebitNotePage()
+	 {
+		 ClickButton(BackFromDebitNotePageBtn);
 	 }
 }
