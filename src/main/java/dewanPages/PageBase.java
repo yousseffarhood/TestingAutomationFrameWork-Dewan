@@ -42,6 +42,6 @@ public class PageBase {
 		{
 			jse.executeScript("arguments[0].click();", element1);
 		}
-
+		
 
 }

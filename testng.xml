@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="DEWAN Suite" >
+<parameter name="browser" value="chrome"></parameter>
+
+  <test  name="DewanTestCases" >
+    <classes>
+      <class name="dewanTests.SalesFullTransactionTest"/>
+      <class name="dewanTests.ReturnSalesFullTransactionTest"/>
+ 	  <class name="dewanTests.PurchaseFullTransactionTest"/>
+    </classes>
+  </test> 
+</suite> 

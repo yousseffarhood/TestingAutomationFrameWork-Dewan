@@ -23,7 +23,7 @@ public class ApplicationsHomePageTest extends TestBase {
 		Loginobj.USerLogin(username, password);
 		Assert.assertTrue(HomePageObj.QuickSales.isDisplayed());
 	}
-	@Test(priority = 2,enabled = false)
+	@Test(priority = 2,enabled = true)
 
 	public void EnterQuickSalesApp() throws InterruptedException
 	{
@@ -34,7 +34,7 @@ public class ApplicationsHomePageTest extends TestBase {
 		Assert.assertTrue(QSobj.WelcomeInQuickSales.getText().equalsIgnoreCase("Welcome in BDMS Quick Sales App."));
 
 	}
-	@Test(priority = 3,enabled = true)
+	@Test(priority = 3,enabled = false)
 	public void EnterTasksAndWorkflowApp() throws InterruptedException
 	{
 		HomePageObj=new HomePage(driver);

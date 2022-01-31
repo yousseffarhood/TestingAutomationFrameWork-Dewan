@@ -15,7 +15,7 @@ import dewanPages.UserLogOutPage;
 import dewanPages.UserLoginPage;
 
 @Test
-public class NewSalesOrderTest extends TestBase{
+public class SalesFullTransactionTest extends TestBase{
 	HomePage HomeObj;
 	UserLoginPage LoginObj;
 	UserLogOutPage LogoutObj;
