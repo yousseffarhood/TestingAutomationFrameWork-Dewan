@@ -14,8 +14,11 @@ public class HomePage extends PageBase {
 		action=new Actions(driver);
 		
 	}
+	@FindBy(css = "h1")
+	public WebElement WelcomeBoard;
 
-	@FindBy(xpath  =".//a[contains(@href,'/test/QuickSales')]")
+
+	@FindBy(xpath  =".//a[contains(@href,'/beta/QuickSales')]")
 	public WebElement QuickSales;
 	public void OpenQuickSales() throws InterruptedException
 	{

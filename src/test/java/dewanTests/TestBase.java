@@ -60,7 +60,7 @@ public class TestBase {
 		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.navigate().to("http://bdms.dewansoft.com/test/Account/LogIn?ReturnUrl=%2Ftest%2F");
+		driver.navigate().to("https://bdms.dewansoft.com/beta");
 		
 	}
 	@AfterSuite

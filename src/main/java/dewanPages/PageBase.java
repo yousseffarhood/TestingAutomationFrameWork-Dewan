@@ -1,5 +1,6 @@
 package dewanPages;
 
+import java.sql.ResultSet;
 import java.util.List;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -32,6 +33,10 @@ public class PageBase {
 		public void SetTextElement(WebElement element,String text )
 		{
 			element.sendKeys(text);
+		}
+		public void SetResultElement(WebElement element, ResultSet text)
+		{
+			
 		}
 		public void ScrollToBottom(WebElement webelment)
 				{

@@ -16,9 +16,10 @@ public class UserLoginPage extends PageBase{
 	WebElement PasswordTxtbox;
 	@FindBy(css = "button.col-3")
 	WebElement LoginBtn;
-
+	
 	public void USerLogin(String username,String password)
 	{
+		
 		SetTextElement(UserNameTxtbox, username);
 		SetTextElement(PasswordTxtbox, password);
 		ClickButton(LoginBtn);

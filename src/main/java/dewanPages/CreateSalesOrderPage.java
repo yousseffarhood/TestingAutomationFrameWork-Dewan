@@ -52,7 +52,7 @@ public class CreateSalesOrderPage extends PageBase {
 	@FindBy(xpath =  "//a[@href='#Payments']")
 	WebElement PaymentsTabBtn;
 
-	@FindBy(xpath = "//*[@id=\"Payments\"]/div/table/tbody/tr/td[9]/a")
+	@FindBy(xpath = "//*[@id=\"Payments\"]/div/table/tbody/tr/td[10]/a")
 	WebElement ConfirmPaymentBtn;
 	@FindBy(xpath = "/html/body/div[1]/main/div/div[2]/strong")
 	public WebElement AssertConfrimPayment;
@@ -60,7 +60,7 @@ public class CreateSalesOrderPage extends PageBase {
 	public WebElement AssertConfrimPayment2;
 	@FindBy(css = "i.text-success.fas.fa-plus-square.fa-sm")
 	WebElement PlusSymbol;
-	@FindBy(css = "input.form-control")
+	@FindBy(name = "DomainModel.PaymentValue")
 	WebElement PaymentValueTxtBox;
 	@FindBy(xpath = "//select[@name='DomainModel.PayamentTypeID']")
 	WebElement PaymentTypeDrpDwnList;
