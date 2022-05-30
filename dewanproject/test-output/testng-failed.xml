@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="configurations.PaymentTypeTest">
+      <class name="configurations.BranchTest">
         <methods>
           <include name="StopDriver"/>
           <include name="ScreenShotOnFailure"/>
-          <include name="CreatePaymentTypeUsingSQL"/>
           <include name="StartDriver"/>
+          <include name="UserLoginWithSQL"/>
         </methods>
-      </class> <!-- configurations.PaymentTypeTest -->
+      </class> <!-- configurations.BranchTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

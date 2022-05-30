@@ -1,6 +1,7 @@
 package dewanPages;
 
 import java.sql.ResultSet;
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -8,7 +9,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PageBase {
 		protected WebDriver driver;
@@ -46,6 +49,13 @@ public class PageBase {
 		public void ClickOnWebElement(WebElement element1)
 		{
 			jse.executeScript("arguments[0].click();", element1);
+		}
+		public void ExplicitWaitClick(WebElement firstResult)
+		{
+			 firstResult = new WebDriverWait(driver, Duration.ofSeconds(10000))
+			 .until(ExpectedConditions.elementToBeClickable(firstResult));
+			firstResult.click();
+			
 		}
 		
 

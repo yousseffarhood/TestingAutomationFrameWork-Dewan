@@ -1,7 +1,6 @@
 package dewanTests;
 
 import java.util.HashMap;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,6 +14,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import utilities.Helper;
 
 public class TestBase {
@@ -42,24 +42,28 @@ public class TestBase {
 		return options2 ; 		
 	}*/
 
-	@SuppressWarnings("deprecation")
 	@BeforeSuite
 	@Parameters({"browser"})
 	public void StartDriver(@Optional("chrome") String BrowserName)
 	{	
 		if (BrowserName.equalsIgnoreCase("chrome"))
 		{
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/drivers/chromedriver.exe");
-		driver = new ChromeDriver(chromeOption()); 
+		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/drivers/chromedriver.exe");
+		//driver = new ChromeDriver(chromeOption()); 
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver(chromeOption()); 
+			
 		} 
 		else if ( BrowserName.equalsIgnoreCase("firefox"))
-		{
-			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"/drivers/geckodriver.exe");
+		{	//old driver way
+			//System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"/drivers/geckodriver.exe");
+			WebDriverManager.firefoxdriver().setup();
+			//new driver way
 			driver = new FirefoxDriver(); 
 		}
 		
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 		driver.navigate().to("https://bdms.dewansoft.com/test");
 		
 	}

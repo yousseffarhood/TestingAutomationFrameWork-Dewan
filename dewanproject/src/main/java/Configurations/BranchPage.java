@@ -32,12 +32,14 @@ public class BranchPage extends PageBase{
 	WebElement BranchAddressTxtbox;
 	@FindBy(css = "button.form-control.btn.btn-info")
 	WebElement SaveBtn;
-	@FindBy(linkText = "Back")
-	WebElement Backbtn;
-	@FindBy(xpath = ".//a[contains(@href,'/beta/QuickSales/BranchPaymentType/Create/')]")
-	WebElement BranchPaymentTypeSquare;
+	@FindBy(xpath = "//a[contains(@href,'/QuickSales/Branch/Details')]")
+	WebElement BackbtnPaymentTypePage;
+	@FindBy(xpath = "//a[contains(@href,'/QuickSales/BranchPaymentType/Create/')]")
+	WebElement BranchPaymentTypePlus;
 	@FindBy(id = "PaymentTypeID")
 	WebElement PaymentTypeDrpdwnlst;
+	@FindBy(xpath = "//a[contains(text(),'Back')]")
+	WebElement BackBtnToBranchPage;
 	String host="localhost";
 	String port="3306";
 
@@ -55,7 +57,9 @@ public class BranchPage extends PageBase{
 		SetTextElement(BranchNameTxtBox, BranchName);
 		SetTextElement(BranchAddressTxtbox, BranchAddress);
 		ClickButton(SaveBtn);
-		ClickButton(BranchPaymentTypeSquare);
+		//create a payment type for the branch
+		ClickButton(BranchPaymentTypePlus);
+		//select payment type from the dropwonlist
 		select=new Select(PaymentTypeDrpdwnlst);
 
 		Connection con= DriverManager.getConnection("jdbc:mysql://"+host+":"+port +"/tst001" , "root", "Root");
@@ -68,11 +72,22 @@ public class BranchPage extends PageBase{
 		ClickButton(SaveBtn);
 
 		}
+		Thread.sleep(2000);
+		ClickButton(BackbtnPaymentTypePage);
+		Thread.sleep(2000);
+		ClickButton(BackBtnToBranchPage);
+		//ExplicitWaitClick(BackbtnPaymentTypePage);
 
-		Thread.sleep(2000);
-		ClickButton(Backbtn);
-		Thread.sleep(2000);
-		ClickButton(Backbtn);
+		//		ExplicitWaitClick(BackbtnPaymentTypePage);
+		//	
+		//		
+		//		
+		//		
+		//		ExplicitWaitClick(BackBtnToBranchPage);
+		//		ClickButton(BackBtnToBranchPage);
+
+
+
 
 
 	}

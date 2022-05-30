@@ -2,12 +2,12 @@
 <testng-results ignored="1" total="3" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-16T14:35:25 EET" name="Default suite" finished-at="2022-05-16T14:36:04 EET" duration-ms="39128">
+  <suite started-at="2022-05-30T16:25:46 EET" name="Default suite" finished-at="2022-05-30T16:27:01 EET" duration-ms="74554">
     <groups>
     </groups>
-    <test started-at="2022-05-16T14:35:25 EET" name="Default test" finished-at="2022-05-16T14:36:04 EET" duration-ms="39128">
-      <class name="configurations.PaymentTypeTest">
-        <test-method is-config="true" signature="StartDriver(java.lang.String)[pri:0, instance:configurations.PaymentTypeTest@7161d8d1]" started-at="2022-05-16T14:35:13 EET" name="StartDriver" finished-at="2022-05-16T14:35:25 EET" duration-ms="12442" status="PASS">
+    <test started-at="2022-05-30T16:25:46 EET" name="Default test" finished-at="2022-05-30T16:27:01 EET" duration-ms="74554">
+      <class name="configurations.BranchTest">
+        <test-method is-config="true" signature="StartDriver(java.lang.String)[pri:0, instance:configurations.BranchTest@28261e8e]" started-at="2022-05-30T16:25:33 EET" name="StartDriver" finished-at="2022-05-30T16:25:46 EET" duration-ms="13197" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,33 +18,51 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartDriver -->
-        <test-method signature="Login()[pri:1, instance:configurations.PaymentTypeTest@7161d8d1]" started-at="2022-05-16T14:35:25 EET" name="Login" finished-at="2022-05-16T14:35:46 EET" duration-ms="21322" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login -->
-        <test-method is-config="true" signature="ScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:configurations.PaymentTypeTest@7161d8d1]" started-at="2022-05-16T14:35:46 EET" name="ScreenShotOnFailure" finished-at="2022-05-16T14:35:46 EET" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Login status=SUCCESS method=PaymentTypeTest.Login()[pri:1, instance:configurations.PaymentTypeTest@7161d8d1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ScreenShotOnFailure -->
-        <test-method signature="CreatePaymentTypeUsingSQL()[pri:2, instance:configurations.PaymentTypeTest@7161d8d1]" started-at="2022-05-16T14:35:46 EET" name="CreatePaymentTypeUsingSQL" finished-at="2022-05-16T14:36:04 EET" duration-ms="17598" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="UserLoginWithSQL()[pri:1, instance:configurations.BranchTest@28261e8e]" started-at="2022-05-30T16:25:46 EET" name="UserLoginWithSQL" finished-at="2022-05-30T16:26:10 EET" duration-ms="23932" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#UserName"}
+  (Session info: chrome=101.0.4951.67)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.0', revision: '87802e897b'
+System info: host: 'DESKTOP-U0TNFHN', ip: '192.168.1.236', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2226a0bd4947dae10c9d2b021eb64f14, findElement {using=id, value=UserName}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\dewan\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51170}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51170/devtoo..., se:cdpVersion: 101.0.4951.67, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2226a0bd4947dae10c9d2b021eb64f14]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertTrue(Assert.java:45)
-at org.testng.Assert.assertTrue(Assert.java:55)
-at configurations.PaymentTypeTest.CreatePaymentTypeUsingSQL(PaymentTypeTest.java:61)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#UserName"}
+  (Session info: chrome=101.0.4951.67)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.0', revision: '87802e897b'
+System info: host: 'DESKTOP-U0TNFHN', ip: '192.168.1.236', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2226a0bd4947dae10c9d2b021eb64f14, findElement {using=id, value=UserName}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\dewan\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51170}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51170/devtoo..., se:cdpVersion: 101.0.4951.67, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2226a0bd4947dae10c9d2b021eb64f14
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy19.sendKeys(Unknown Source)
+at dewanPages.PageBase.SetTextElement(PageBase.java:38)
+at dewanPages.UserLoginPage.USerLogin(UserLoginPage.java:23)
+at configurations.BranchTest.UserLoginWithSQL(BranchTest.java:37)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -75,26 +93,41 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CreatePaymentTypeUsingSQL -->
-        <test-method is-config="true" signature="ScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:configurations.PaymentTypeTest@7161d8d1]" started-at="2022-05-16T14:36:04 EET" name="ScreenShotOnFailure" finished-at="2022-05-16T14:36:04 EET" duration-ms="144" status="PASS">
+        </test-method> <!-- UserLoginWithSQL -->
+        <test-method is-config="true" signature="ScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:configurations.BranchTest@28261e8e]" started-at="2022-05-30T16:26:10 EET" name="ScreenShotOnFailure" finished-at="2022-05-30T16:26:11 EET" duration-ms="462" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CreatePaymentTypeUsingSQL status=FAILURE method=PaymentTypeTest.CreatePaymentTypeUsingSQL()[pri:2, instance:configurations.PaymentTypeTest@7161d8d1] output={null}]]]>
+                <![CDATA[[TestResult name=UserLoginWithSQL status=FAILURE method=BranchTest.UserLoginWithSQL()[pri:1, instance:configurations.BranchTest@28261e8e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ScreenShotOnFailure -->
-        <test-method is-config="true" signature="StopDriver()[pri:0, instance:configurations.PaymentTypeTest@7161d8d1]" started-at="2022-05-16T14:36:04 EET" name="StopDriver" finished-at="2022-05-16T14:36:05 EET" duration-ms="308" status="PASS">
+        <test-method signature="BranchWithSQL()[pri:2, instance:configurations.BranchTest@28261e8e]" started-at="2022-05-30T16:26:11 EET" name="BranchWithSQL" finished-at="2022-05-30T16:27:01 EET" duration-ms="50100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BranchWithSQL -->
+        <test-method is-config="true" signature="ScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:configurations.BranchTest@28261e8e]" started-at="2022-05-30T16:27:01 EET" name="ScreenShotOnFailure" finished-at="2022-05-30T16:27:01 EET" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=BranchWithSQL status=SUCCESS method=BranchTest.BranchWithSQL()[pri:2, instance:configurations.BranchTest@28261e8e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ScreenShotOnFailure -->
+        <test-method is-config="true" signature="StopDriver()[pri:0, instance:configurations.BranchTest@28261e8e]" started-at="2022-05-30T16:27:01 EET" name="StopDriver" finished-at="2022-05-30T16:27:01 EET" duration-ms="211" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StopDriver -->
-      </class> <!-- configurations.PaymentTypeTest -->
+      </class> <!-- configurations.BranchTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

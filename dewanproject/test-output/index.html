@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\dewan\AppData\Local\Temp\testng-eclipse--1099006181\testng-customsuite.xml</span>
+                    <span>C:\Users\dewan\AppData\Local\Temp\testng-eclipse-578395439\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="configurations.PaymentTypeTest" class="method navigator-link" hash-for-method="CreatePaymentTypeUsingSQL">CreatePaymentTypeUsingSQL</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="configurations.BranchTest" class="method navigator-link" hash-for-method="UserLoginWithSQL">UserLoginWithSQL</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -118,7 +118,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="configurations.PaymentTypeTest" class="method navigator-link" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="configurations.BranchTest" class="method navigator-link" hash-for-method="BranchWithSQL">BranchWithSQL</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -136,20 +136,45 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">configurations.PaymentTypeTest</span>
+              <span class="class-name">configurations.BranchTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="CreatePaymentTypeUsingSQL">
-                  </a> <!-- CreatePaymentTypeUsingSQL -->
-                  <span class="method-name">CreatePaymentTypeUsingSQL</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertTrue(Assert.java:45)
-	at org.testng.Assert.assertTrue(Assert.java:55)
-	at configurations.PaymentTypeTest.CreatePaymentTypeUsingSQL(PaymentTypeTest.java:61)
+                  <a name="UserLoginWithSQL">
+                  </a> <!-- UserLoginWithSQL -->
+                  <span class="method-name">UserLoginWithSQL</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#UserName&quot;}
+  (Session info: chrome=101.0.4951.67)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.0&apos;, revision: &apos;87802e897b&apos;
+System info: host: &apos;DESKTOP-U0TNFHN&apos;, ip: &apos;192.168.1.236&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2226a0bd4947dae10c9d2b021eb64f14, findElement {using=id, value=UserName}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\dewan\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51170}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51170/devtoo..., se:cdpVersion: 101.0.4951.67, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2226a0bd4947dae10c9d2b021eb64f14
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.sendKeys(Unknown Source)
+	at dewanPages.PageBase.SetTextElement(PageBase.java:38)
+	at dewanPages.UserLoginPage.USerLogin(UserLoginPage.java:23)
+	at configurations.BranchTest.UserLoginWithSQL(BranchTest.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -187,14 +212,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">configurations.PaymentTypeTest</span>
+              <span class="class-name">configurations.BranchTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Login">
-                  </a> <!-- Login -->
-                  <span class="method-name">Login</span>
+                  <a name="BranchWithSQL">
+                  </a> <!-- BranchWithSQL -->
+                  <span class="method-name">BranchWithSQL</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -202,7 +227,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\dewan\AppData\Local\Temp\testng-eclipse--1099006181\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\dewan\AppData\Local\Temp\testng-eclipse-578395439\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -211,7 +236,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;configurations.PaymentTypeTest&quot;/&gt;
+      &lt;class name=&quot;configurations.BranchTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -253,18 +278,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Login')
-data.setCell(0, 2, 'configurations.PaymentTypeTest')
-data.setCell(0, 3, 21322);
+data.setCell(0, 1, 'BranchWithSQL')
+data.setCell(0, 2, 'configurations.BranchTest')
+data.setCell(0, 3, 50100);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'CreatePaymentTypeUsingSQL')
-data.setCell(1, 2, 'configurations.PaymentTypeTest')
-data.setCell(1, 3, 17598);
+data.setCell(1, 1, 'UserLoginWithSQL')
+data.setCell(1, 2, 'configurations.BranchTest')
+data.setCell(1, 3, 23932);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 38 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -283,9 +308,9 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">configurations.PaymentTypeTest</span>
+              <span class="ignored-class-name">configurations.BranchTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">DeletePayments</span>
+                <span class="ignored-method-name">FillBranch</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -297,32 +322,32 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">configurations.PaymentTypeTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">configurations.BranchTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">StartDriver(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
-                <span class="method-name">Login</span>
-                <span class="method-start">12493 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">ScreenShotOnFailure([TestResult name=Login status=SUCCESS method=PaymentTypeTest.Login()[pri:1, instance:configurations....)</span>
-                <span class="method-start">33822 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">CreatePaymentTypeUsingSQL</span>
-                <span class="method-start">33827 ms</span>
+                <span class="method-name">UserLoginWithSQL</span>
+                <span class="method-start">13243 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">ScreenShotOnFailure([TestResult name=CreatePaymentTypeUsingSQL status=FAILURE method=PaymentTypeTest.CreatePaymentTypeUs...)</span>
-                <span class="method-start">51429 ms</span>
+                <span class="method-name">ScreenShotOnFailure([TestResult name=UserLoginWithSQL status=FAILURE method=BranchTest.UserLoginWithSQL()[pri:1, instanc...)</span>
+                <span class="method-start">37184 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">BranchWithSQL</span>
+                <span class="method-start">37648 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">ScreenShotOnFailure([TestResult name=BranchWithSQL status=SUCCESS method=BranchTest.BranchWithSQL()[pri:2, instance:conf...)</span>
+                <span class="method-start">87751 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">StopDriver</span>
-                <span class="method-start">51630 ms</span>
+                <span class="method-start">87814 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
